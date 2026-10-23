@@ -46,3 +46,9 @@ h1 {
     color: #0056b3;
     margin-bottom: 30px;
 }
+
+.result.error {
+    background: #fdecea;
+    border-color: #d93025;
+    color: #b3261e;
+}

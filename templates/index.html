@@ -13,11 +13,18 @@
         <button type="submit">🔍 Tekshir</button>
     </form>
 
+    {% if error %}
+        <div class="result error">
+            <p>⚠️ {{ error }}</p>
+        </div>
+    {% endif %}
+
     {% if result %}
         <div class="result">
             <p><strong>Natija:</strong> {{ result }}</p>
             <p><strong>Ishonchlilik:</strong> {{ confidence }}</p>
             <p><strong>Rasm:</strong> {{ filename }}</p>
+            <p><em>Bu o'quv loyihasi natijasi, tibbiy tashxis emas.</em></p>
         </div>
     {% endif %}
 </body>

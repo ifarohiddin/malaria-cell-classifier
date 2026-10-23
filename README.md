@@ -28,7 +28,7 @@ Rasm yuklanganda `RGB` ga o'tkaziladi, 128×128 ga o'zgartiriladi va `[0, 1]` or
 
 ## 🛠️ Texnologiyalar
 
-- **Python 3.10+**
+- **Python 3.10–3.12** (`tensorflow==2.19.0` yangi Python versiyalarini hali qo'llamaydi)
 - **TensorFlow / Keras** — model
 - **FastAPI + Uvicorn** — web server
 - **Jinja2** — HTML shablonlar
@@ -50,6 +50,13 @@ uvicorn main:app --reload
 
 So'ng brauzerda [http://127.0.0.1:8000](http://127.0.0.1:8000) manzilini oching.
 
+### Testlar
+```bash
+pip install -r requirements-dev.txt
+pytest
+```
+Testlar haqiqiy modelni yuklamaydi (u soxta model bilan almashtiriladi), shuning uchun tez ishlaydi. Ular rasmni tayyorlash, natija yorlig'i va ishonchlilik foizi, chegara qiymati (0.5) va noto'g'ri fayl yuklash holatlarini tekshiradi.
+
 ## 📁 Loyiha tuzilmasi
 
 ```text
@@ -58,6 +65,8 @@ malaria-cell-classifier/
 ├── malaria_cnn_model.h5     # O'qitilgan CNN model
 ├── malaria_model.pkl        # Qo'shimcha model fayli
 ├── requirements.txt
+├── requirements-dev.txt     # pytest, httpx
+├── tests/                   # pytest testlari
 ├── templates/
 │   └── index.html           # Asosiy sahifa
 └── static/
