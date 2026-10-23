@@ -28,7 +28,7 @@ Rasm yuklanganda `RGB` ga o'tkaziladi, 128×128 ga o'zgartiriladi va `[0, 1]` or
 
 ## 🛠️ Texnologiyalar
 
-- **Python**
+- **Python 3.10+**
 - **TensorFlow / Keras** — model
 - **FastAPI + Uvicorn** — web server
 - **Jinja2** — HTML shablonlar
@@ -37,8 +37,8 @@ Rasm yuklanganda `RGB` ga o'tkaziladi, 128×128 ga o'zgartiriladi va `[0, 1]` or
 ## 🚀 Ishga tushirish
 
 ```bash
-git clone https://github.com/ifarohiddin/malaria_data.git
-cd malaria_data
+git clone https://github.com/ifarohiddin/malaria-cell-classifier.git
+cd malaria-cell-classifier
 
 python -m venv venv
 source venv/bin/activate      # Windows: venv\Scripts\activate
@@ -53,7 +53,7 @@ So'ng brauzerda [http://127.0.0.1:8000](http://127.0.0.1:8000) manzilini oching.
 ## 📁 Loyiha tuzilmasi
 
 ```text
-malaria_data/
+malaria-cell-classifier/
 ├── main.py                  # FastAPI ilova (/ va /predict)
 ├── malaria_cnn_model.h5     # O'qitilgan CNN model
 ├── malaria_model.pkl        # Qo'shimcha model fayli
